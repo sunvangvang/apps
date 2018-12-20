@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.aibyd</groupId>
+    <artifactId>apps</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.5.RELEASE</version>
+        <relativePath />
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.test.skip>true</maven.test.skip>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <modules>
+        <module>apps-db</module>
+        <module>apps-core</module>
+    </modules>
+
+    <dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.aibyd</groupId>
+				<artifactId>apps-db</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- <dependency>
+				<groupId>com.aibyd</groupId>
+				<artifactId>appsys</artifactId>
+				<version>${appsys.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>junit.version}</version>
+			</dependency>
+ -->
+            <!-- Spring Boot Mybatis 依赖 -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>1.3.2</version>
+            </dependency>
+
+            <!-- Spring Boot pagehelper 依赖 -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>1.2.5</version>
+            </dependency>
+
+            <!-- MySQL 连接驱动依赖 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.46</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>1.1.10</version>
+            </dependency>
+
+		</dependencies>
+    </dependencyManagement>
+
+	<distributionManagement>
+
+		<snapshotRepository>
+			<id>aibyd-snapshot</id>
+			<name>Snapshot Repository</name>
+			<url>http://www.ai-sunny.com:8081/repository/aibyd-snapshot/</url>
+		</snapshotRepository>
+
+		<repository>
+			<id>aibyd-releases</id>
+			<name>Releases Repository</name>
+			<url>http://www.ai-sunny.com:8081/repository/aibyd-releases/</url>
+		</repository>
+
+	</distributionManagement>
+
+	<!-- <pluginRepositories>
+		<pluginRepository>
+			<id>nexus</id>
+			<name>Nexus Plugin Repository</name>
+			<url>http://www.ai-sunny.com:8081/repository/maven-public</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</pluginRepository>
+	</pluginRepositories> -->
+
+    <build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+			</plugin>
+
+		</plugins>
+
+	</build>
+
+</project>
