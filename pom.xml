@@ -17,7 +17,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.test.skip>true</maven.test.skip>
+        <!-- <maven.test.skip>true</maven.test.skip> -->
         <java.version>1.8</java.version>
     </properties>
 
@@ -37,14 +37,12 @@
 				<groupId>com.aibyd</groupId>
 				<artifactId>appsys</artifactId>
 				<version>${appsys.version}</version>
-			</dependency>
-
-			<dependency>
+			</dependency> -->
+			<!-- <dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
-				<version>junit.version}</version>
-			</dependency>
- -->
+				<version>4.7</version>
+			</dependency> -->
             <!-- Spring Boot Mybatis 依赖 -->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -74,6 +72,30 @@
 
 		</dependencies>
     </dependencyManagement>
+
+	    <dependencies>
+
+        <!-- 热部署模块 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 测试模块 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <!-- <exclusions>
+                <exclusion>
+                    <groupId>com.vaadin.external.google</groupId>
+                    <artifactId>android-json</artifactId>
+                </exclusion>
+            </exclusions> -->
+        </dependency>
+    </dependencies>
+
 
 	<distributionManagement>
 
