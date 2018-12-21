@@ -1,8 +1,8 @@
 package com.aibyd.apps.db.dao;
 
-import static org.junit.Assert.assertEquals;
-
 import com.aibyd.apps.db.Application;
+
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

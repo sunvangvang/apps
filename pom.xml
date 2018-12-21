@@ -17,22 +17,44 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <!-- <maven.test.skip>true</maven.test.skip> -->
+        <maven.test.skip>true</maven.test.skip>
         <java.version>1.8</java.version>
     </properties>
 
     <modules>
         <module>apps-db</module>
         <module>apps-core</module>
+        <module>apps-admin</module>
+        <module>apps-all</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
+
             <dependency>
                 <groupId>com.aibyd</groupId>
                 <artifactId>apps-db</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.aibyd</groupId>
+                <artifactId>apps-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aibyd</groupId>
+                <artifactId>apps-admin</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aibyd</groupId>
+                <artifactId>apps-all</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <!-- <dependency>
 				<groupId>com.aibyd</groupId>
 				<artifactId>appsys</artifactId>

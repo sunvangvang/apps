@@ -32,5 +32,12 @@ hs_err_pid*
 /apps-core/.settings/
 /apps-core/.classpath
 /apps-core/.project
+/apps-admin/.settings/
+/apps-admin/.classpath
+/apps-admin/.project
+/apps-admin/target/
+/apps-all/.settings/
+/apps-all/.classpath
+/apps-all/.project
 /workspace/
 /.vscode/
