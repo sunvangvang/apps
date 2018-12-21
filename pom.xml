@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.aibyd</groupId>
     <artifactId>apps</artifactId>
@@ -27,18 +27,18 @@
     </modules>
 
     <dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>com.aibyd</groupId>
-				<artifactId>apps-db</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<!-- <dependency>
+        <dependencies>
+            <dependency>
+                <groupId>com.aibyd</groupId>
+                <artifactId>apps-db</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- <dependency>
 				<groupId>com.aibyd</groupId>
 				<artifactId>appsys</artifactId>
 				<version>${appsys.version}</version>
 			</dependency> -->
-			<!-- <dependency>
+            <!-- <dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>4.7</version>
@@ -70,10 +70,10 @@
                 <version>1.1.10</version>
             </dependency>
 
-		</dependencies>
+        </dependencies>
     </dependencyManagement>
 
-	    <dependencies>
+    <dependencies>
 
         <!-- 热部署模块 -->
         <dependency>
@@ -94,26 +94,32 @@
                 </exclusion>
             </exclusions> -->
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 
-	<distributionManagement>
+    <distributionManagement>
 
-		<snapshotRepository>
-			<id>aibyd-snapshot</id>
-			<name>Snapshot Repository</name>
-			<url>http://www.ai-sunny.com:8081/repository/aibyd-snapshot/</url>
-		</snapshotRepository>
+        <snapshotRepository>
+            <id>aibyd-snapshot</id>
+            <name>Snapshot Repository</name>
+            <url>http://www.ai-sunny.com:8081/repository/aibyd-snapshot/</url>
+        </snapshotRepository>
 
-		<repository>
-			<id>aibyd-releases</id>
-			<name>Releases Repository</name>
-			<url>http://www.ai-sunny.com:8081/repository/aibyd-releases/</url>
-		</repository>
+        <repository>
+            <id>aibyd-releases</id>
+            <name>Releases Repository</name>
+            <url>http://www.ai-sunny.com:8081/repository/aibyd-releases/</url>
+        </repository>
 
-	</distributionManagement>
+    </distributionManagement>
 
-	<!-- <pluginRepositories>
+    <!-- <pluginRepositories>
 		<pluginRepository>
 			<id>nexus</id>
 			<name>Nexus Plugin Repository</name>
@@ -128,32 +134,32 @@
 	</pluginRepositories> -->
 
     <build>
-		<plugins>
+        <plugins>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-resources-plugin</artifactId>
-				<configuration>
-					<encoding>UTF-8</encoding>
-				</configuration>
-			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-			</plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+            </plugin>
 
-		</plugins>
+        </plugins>
 
-	</build>
+    </build>
 
 </project>
