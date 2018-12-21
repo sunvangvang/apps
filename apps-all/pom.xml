@@ -1,0 +1,104 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>apps-all</artifactId>
+    <packaging>jar</packaging>
+
+    <parent>
+        <groupId>com.aibyd</groupId>
+        <artifactId>apps</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-json</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aibyd</groupId>
+            <artifactId>apps-db</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aibyd</groupId>
+            <artifactId>apps-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aibyd</groupId>
+            <artifactId>apps-admin</artifactId>
+        </dependency>
+
+        <!-- <dependency>
+            <groupId>com.github.qcloudsms</groupId>
+            <artifactId>qcloudsms</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.qcloud</groupId>
+            <artifactId>cos_api</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>slf4j-log4j12</artifactId>
+                    <groupId>org.slf4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>commons-lang</artifactId>
+                    <groupId>commons-lang</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.qiniu</groupId>
+            <artifactId>qiniu-java-sdk</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-miniapp</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-pay</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.linlinjava</groupId>
+            <artifactId>litemall-db</artifactId>
+        </dependency> -->
+    </dependencies>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>aibyd-snapshot</id>
+            <name>Arvin Snapshot Repository</name>
+            <url>http://www.ai-sunny.com:8081/repository/aibyd-snapshot/</url>
+        </snapshotRepository>
+        <repository>
+            <id>aibyd-releases</id>
+            <name>Arvin Releases Repository</name>
+            <url>http://www.ai-sunny.com:8081/repository/aibyd-releases/</url>
+        </repository>
+    </distributionManagement>
+
+</project>
