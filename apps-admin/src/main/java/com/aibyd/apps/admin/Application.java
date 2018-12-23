@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@SpringBootApplication(scanBasePackages = {"com.aibyd.apps"})
+@SpringBootApplication(scanBasePackages = { "com.aibyd.apps" })
 @MapperScan("com.aibyd.apps.db.dao")
 @EnableTransactionManagement
 @EnableScheduling

@@ -12,6 +12,16 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>com.aibyd</groupId>
+            <artifactId>apps-db</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aibyd</groupId>
+            <artifactId>apps-core</artifactId>
+        </dependency>
+
         <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -22,20 +32,11 @@
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency> -->
 
-        <dependency>
+        <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-json</artifactId>
-        </dependency>
+        </dependency> -->
 
-        <dependency>
-            <groupId>com.aibyd</groupId>
-            <artifactId>apps-db</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.aibyd</groupId>
-            <artifactId>apps-core</artifactId>
-        </dependency>
         <!-- <dependency>
             <groupId>com.github.qcloudsms</groupId>
             <artifactId>qcloudsms</artifactId>
@@ -81,7 +82,6 @@
             <artifactId>litemall-db</artifactId>
         </dependency> -->
     </dependencies>
-
     <distributionManagement>
         <snapshotRepository>
             <id>aibyd-snapshot</id>
@@ -94,5 +94,4 @@
             <url>http://www.ai-sunny.com:8081/repository/aibyd-releases/</url>
         </repository>
     </distributionManagement>
-
 </project>

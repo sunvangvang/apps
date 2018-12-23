@@ -29,6 +29,7 @@ hs_err_pid*
 /apps-db/.settings/
 /apps-db/.classpath
 /apps-db/.project
+/apps-db/target/
 /apps-core/.settings/
 /apps-core/.classpath
 /apps-core/.project
@@ -39,5 +40,6 @@ hs_err_pid*
 /apps-all/.settings/
 /apps-all/.classpath
 /apps-all/.project
+/apps-all/target/
 /workspace/
 /.vscode/
