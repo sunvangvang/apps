@@ -42,10 +42,7 @@
         </commentGenerator>
 
         <!--数据库连接信息-->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://47.93.49.198:3306/apps?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC&amp;verifyServerCertificate=false&amp;useSSL=false"
-                        userId="apps"
-                        password="apps"/>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://47.93.49.198:3306/apps?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC&amp;verifyServerCertificate=false&amp;useSSL=false" userId="apps" password="apps"/>
 
         <javaTypeResolver>
             <property name="useJSR310Types" value="true"/>
@@ -53,116 +50,107 @@
 
         <javaModelGenerator targetPackage="com.aibyd.apps.db.domain" targetProject="src/main/java"/>
         <sqlMapGenerator targetPackage="com.aibyd.apps.db.dao" targetProject="src/main/resources"/>
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.aibyd.apps.db.dao"
-                             targetProject="src/main/java"/>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.aibyd.apps.db.dao" targetProject="src/main/java"/>
         <!--表名-->
         <table tableName="apps_user">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
-        <!-- <table tablename="litemall_address">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_address">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_admin">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_admin">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_brand">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_brand">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_cart">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
-            <columnoverride column="specifications" javatype="java.lang.string[]"
-                            typehandler="org.linlinjava.litemall.db.mybatis.jsonstringarraytypehandler"/>
+        <table tableName="mall_cart">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <columnOverride column="specifications" javaType="java.lang.String[]" typeHandler="com.aibyd.apps.db.mybatis.Json2StringArrayTypeHandler"/>
         </table>
-        <table tablename="litemall_category">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_category">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_collect">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_collect">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_comment">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
-            <columnoverride column="pic_urls" javatype="java.lang.string[]"
-                            typehandler="org.linlinjava.litemall.db.mybatis.jsonstringarraytypehandler"/>
+        <table tableName="mall_comment">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <columnOverride column="pic_urls" javaType="java.lang.String[]" typeHandler="com.aibyd.apps.db.mybatis.Json2StringArrayTypeHandler"/>
         </table>
 
-        <table tablename="litemall_feedback">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
-            <columnoverride column="pic_urls" javatype="java.lang.string[]"
-                            typehandler="org.linlinjava.litemall.db.mybatis.jsonstringarraytypehandler"/>
+        <table tableName="mall_feedback">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <columnOverride column="pic_urls" javaType="java.lang.String[]" typeHandler="com.aibyd.apps.db.mybatis.Json2StringArrayTypeHandler"/>
         </table>
 
-        <table tablename="litemall_footprint">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_footprint">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_goods">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
-            <columnoverride column="gallery" javatype="java.lang.string[]"
-                            typehandler="org.linlinjava.litemall.db.mybatis.jsonstringarraytypehandler"/>
+        <table tableName="mall_goods">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <columnOverride column="gallery" javaType="java.lang.String[]" typeHandler="com.aibyd.apps.db.mybatis.Json2StringArrayTypeHandler"/>
         </table>
-        <table tablename="litemall_goods_attribute">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_goods_attribute">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_goods_specification">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_goods_specification">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_goods_product">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
-            <columnoverride column="specifications" javatype="java.lang.string[]"
-                            typehandler="org.linlinjava.litemall.db.mybatis.jsonstringarraytypehandler"/>
+        <table tableName="mall_goods_product">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <columnOverride column="specifications" javaType="java.lang.String[]" typeHandler="com.aibyd.apps.db.mybatis.Json2StringArrayTypeHandler"/>
         </table>
-        <table tablename="litemall_issue">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_issue">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_keyword">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_keyword">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_order">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_order">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_order_goods">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
-            <columnoverride column="specifications" javatype="java.lang.string[]"
-                            typehandler="org.linlinjava.litemall.db.mybatis.jsonstringarraytypehandler"/>
-            <columnoverride column="comments" javatype="java.lang.integer[]"
-                            typehandler="org.linlinjava.litemall.db.mybatis.jsonintegerarraytypehandler"/>
+        <table tableName="mall_order_goods">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <columnOverride column="specifications" javaType="java.lang.String[]" typeHandler="com.aibyd.apps.db.mybatis.Json2StringArrayTypeHandler"/>
+            <columnOverride column="comments" javaType="java.lang.Integer[]" typeHandler="com.aibyd.apps.db.mybatis.Json2IntegerArrayTypeHandler"/>
 
         </table>
-        <table tablename="litemall_region">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_region">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_search_history">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_search_history">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_storage">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_storage">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_topic">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
-            <columnoverride column="goods" javatype="java.lang.integer[]"
-                            typehandler="org.linlinjava.litemall.db.mybatis.jsonintegerarraytypehandler"/>
+        <table tableName="mall_topic">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <columnOverride column="goods" javaType="java.lang.Integer[]" typeHandler="com.aibyd.apps.db.mybatis.Json2IntegerArrayTypeHandler"/>
         </table>
-        <table tablename="litemall_user">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_user">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_system">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
-        </table>
-
-        <table tablename="litemall_user_formid">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_system">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
 
-        <table tablename="litemall_groupon_rules">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_user_formid">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_groupon">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+
+        <table tableName="mall_groupon_rules">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_coupon">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
+        <table tableName="mall_groupon">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
-        <table tablename="litemall_coupon_user">
-            <generatedkey column="id" sqlstatement="mysql" identity="true"/>
-        </table> -->
+        <table tableName="mall_coupon">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table tableName="mall_coupon_user">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
     </context>
 </generatorConfiguration>
