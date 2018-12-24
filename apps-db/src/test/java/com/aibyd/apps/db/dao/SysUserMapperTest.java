@@ -2,7 +2,7 @@ package com.aibyd.apps.db.dao;
 
 import com.aibyd.apps.db.Application;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.Assert;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,17 +12,17 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
-public class AppsUserMapperTest {
+public class SysUserMapperTest {
 
     @Autowired
-    private AppsUserMapper appsUserMapper;
+    private SysUserMapper sysUserMapper;
 
     @Test
     public void testUser() {
-        long count = appsUserMapper.countByExample(null);
+        long count = sysUserMapper.countByExample(null);
         // for (Map m : result) {
         // m.forEach((k, v) -> System.out.println("key:value = " + k + ":" + v));
         // }
-        assertEquals(1, count);
+        Assert.assertEquals(1, count);
     }
 }

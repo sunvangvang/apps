@@ -52,7 +52,19 @@
         <sqlMapGenerator targetPackage="com.aibyd.apps.db.dao" targetProject="src/main/resources"/>
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.aibyd.apps.db.dao" targetProject="src/main/java"/>
         <!--表名-->
-        <table tableName="apps_user">
+        <table tableName="sys_user">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="sys_role">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="sys_menu">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="sys_user_role">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+        <table tableName="sys_menu_role">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
         <table tableName="mall_address">
