@@ -1,8 +1,5 @@
 package com.aibyd.apps.core.util;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.alibaba.fastjson.JSONObject;
 
 /**
@@ -12,7 +9,7 @@ import com.alibaba.fastjson.JSONObject;
  *  {
  *      state: 响应码
  *      msg: 相应信息
- *      data: 响应数据
+ *      res: 响应数据
  *  }
  * </pre>
  * 
@@ -48,21 +45,21 @@ public class ResponseUtil {
         return obj;
     }
 
-    public static JSONObject ok(Object data) {
+    public static JSONObject ok(Object res) {
         // Map<String, Object> obj = new HashMap<String, Object>();
         JSONObject obj = new JSONObject();
         obj.put("state", 0);
         obj.put("msg", "成功");
-        obj.put("data", data);
+        obj.put("res", res);
         return obj;
     }
 
-    public static JSONObject ok(String msg, Object data) {
+    public static JSONObject ok(String msg, Object res) {
         // Map<String, Object> obj = new HashMap<String, Object>();
         JSONObject obj = new JSONObject();
         obj.put("state", 0);
         obj.put("msg", msg);
-        obj.put("data", data);
+        obj.put("res", res);
         return obj;
     }
 
