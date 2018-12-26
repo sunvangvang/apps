@@ -23,8 +23,9 @@ public class SysUserController {
     private SysUserService sysUserService;
 
     @GetMapping(path = "/all")
-    public @ResponseBody JSONObject all(@RequestParam String userName) {
-        List<SysUser> users = sysUserService.queryByUserName(userName);
+    public @ResponseBody JSONObject all(@RequestParam String userName) throws Exception {
+        // List<SysUser> users = sysUserService.queryByUserName(userName);
+        List<SysUser> users = sysUserService.querySelective(userName);
         return ResponseUtil.ok(users);
     }
 

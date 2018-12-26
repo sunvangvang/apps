@@ -7,6 +7,7 @@ import java.util.List;
 import com.aibyd.apps.db.dao.SysUserMapper;
 import com.aibyd.apps.db.domain.SysUser;
 import com.aibyd.apps.db.domain.SysUserExample;
+import com.alibaba.druid.util.StringUtils;
 
 import org.springframework.stereotype.Service;
 
@@ -28,6 +29,17 @@ public class SysUserService {
     public List<SysUser> queryByUserName(String userName) {
         SysUserExample example = new SysUserExample();
         example.or().andUserNameEqualTo(userName);
+        return userMapper.selectByExample(example);
+    }
+
+    public List<SysUser> querySelective(String userName) {
+        SysUserExample example = new SysUserExample();
+        SysUserExample.Criteria criteria = example.createCriteria();
+
+        if (!StringUtils.isEmpty(userName)) {
+            criteria.andUserNameLike("%" + userName + "%");
+        }
+
         return userMapper.selectByExample(example);
     }
 

@@ -40,7 +40,7 @@ public class ResponseUtil {
     public static JSONObject ok() {
         // Map<String, Object> obj = new HashMap<String, Object>();
         JSONObject obj = new JSONObject();
-        obj.put("state", 0);
+        obj.put("state", 200);
         obj.put("msg", "成功");
         return obj;
     }
@@ -48,7 +48,7 @@ public class ResponseUtil {
     public static JSONObject ok(Object res) {
         // Map<String, Object> obj = new HashMap<String, Object>();
         JSONObject obj = new JSONObject();
-        obj.put("state", 0);
+        obj.put("state", 200);
         obj.put("msg", "成功");
         obj.put("res", res);
         return obj;
@@ -57,7 +57,7 @@ public class ResponseUtil {
     public static JSONObject ok(String msg, Object res) {
         // Map<String, Object> obj = new HashMap<String, Object>();
         JSONObject obj = new JSONObject();
-        obj.put("state", 0);
+        obj.put("state", 200);
         obj.put("msg", msg);
         obj.put("res", res);
         return obj;
