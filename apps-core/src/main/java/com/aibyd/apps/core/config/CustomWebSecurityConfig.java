@@ -14,6 +14,7 @@ import com.aibyd.apps.core.comp.SysUserDetailsService;
 import com.aibyd.apps.core.util.MD5Util;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -84,6 +85,22 @@ public class CustomWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 return MD5Util.encode((String) rawPassword);
             }
         });
+    }
+
+    @Bean
+    public PasswordEncoder md5PasswordEncoder() {
+        return new PasswordEncoder() {
+
+            @Override
+            public boolean matches(CharSequence rawPassword, String encodedPassword) {
+                return encodedPassword.equals(MD5Util.encode((String) rawPassword));
+            }
+
+            @Override
+            public String encode(CharSequence rawPassword) {
+                return MD5Util.encode((String) rawPassword);
+            }
+        };
     }
 
 }
