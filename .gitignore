@@ -33,6 +33,7 @@ hs_err_pid*
 /apps-core/.settings/
 /apps-core/.classpath
 /apps-core/.project
+/apps-core/.factorypath
 /apps-admin/.settings/
 /apps-admin/.classpath
 /apps-admin/.project
